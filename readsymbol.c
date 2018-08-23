@@ -314,7 +314,7 @@ int main(int argc, char *argv[])
         symptr = (myElf32_Sym *)SymTblEntry;
 
         char *symbol_name = SymNamStrTable + symptr->st_name;
-        if(indexOf(symbol_name,"Java_com")==0){
+        if(indexOf(symbol_name, (char *)"Java")==0){
             fprintf(stdout, "%s\n", symbol_name);
         }
     }
